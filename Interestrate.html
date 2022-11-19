@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Interest rate</title>
+</head>
+<body>
+<script>
+  let money= +prompt("nhập tiền gửi:");
+  let option= +prompt("nhập gói lãi suất (3-6-12 tháng):");
+  let interest = [
+    {
+      id: 3,
+      rate: 0.02,
+    },
+    {
+      id: 6,
+      rate: 0.08/6
+    },
+    {
+      id: 12,
+      rate: 0.086/12
+    }
+  ]
+
+  function calculator(money, option, interest) {
+      let result = money;
+      for(i=0;i<interest.length;i++)
+      if (interest[i].id == option)
+          for (let j = 1; j <= interest[i].id; j++) {
+              result = result * (interest[i].rate +1);
+          }
+      return result;
+  }
+
+ document.write("tổng tiền là:" + calculator(money,option,interest));
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>printfibonaci</title>
+</head>
+<body>
+<script>
+    let numBer= +prompt("số lượng fibo: ");
+    let b;
+    let fi= 1;
+    let a= 0;
+    for(let i= 0; i< numBer; i++ ){
+       document.write(fi + "<br>");
+       b= fi;
+       fi += a;
+       a = b;
+    }
+
+</script>
+</body>
+</html>

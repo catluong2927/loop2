@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>right triangle</title>
+</head>
+<body>
+<script>
+  function triang1(){
+      for(let i=0;i<5;i++){
+          let j=0;
+          while(j<=i){
+              document.write("*");
+              j++;
+          }
+          document.write("<br>");
+      }
+  }
+
+  function triang2(){
+      for(let i=5;i>0;i--){
+          let k=0;
+          while(k<i){
+              document.write("*");
+              k++;
+          }
+      document.write("<br>");
+      }
+  }
+  function triang3(){
+      for(let i=5;i>0;i--){
+      let k=0;
+      while(k<=5){
+          if (k>=i && k <6) document.write("*");
+            else {document.write("&nbsp;&nbsp");}
+        k++;
+        }
+      document.write("<br>");
+      }
+  }
+  function triang4(){
+      for(let i=5;i>0;i--){
+          let k=5;
+          while(k>0){
+              if (k>i) document.write("&nbsp;&nbsp");
+              else {document.write("*");}
+              k--;
+          }
+          document.write("<br>");
+      }
+  }
+  triang1();
+  document.write("<br><br>");
+  triang2();
+  document.write("<br><br>");
+  triang3();
+  document.write("<br><br>");
+  triang4();
+  //code tối ưu hơn
+  // for (let i = n; i > 0; i--) {
+  //     console.log(" ".repeat(i - 1) + "#".repeat(n - (i - 1)));
+  // }
+</script>
+</body>
+</html>
